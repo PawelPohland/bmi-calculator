@@ -8,5 +8,78 @@
     <script src="app.js" defer></script>
     <title>BMI Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>
+        Body Mass Index (BMI)
+        <br />
+        Calculator
+      </h1>
+
+      <form action="#" id="bmi-form">
+        <div class="form-group">
+          <legend for="height">Height</legend>
+          <input type="text" name="height" id="height" required />
+          <p>CM</p>
+        </div>
+        <div class="form-group">
+          <legend for="weight">Weight</legend>
+          <input type="text" name="weight" id="weight" required />
+          <p>KG</p>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="bmi-guide">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>
+                BMI (kg/m
+                <sup>2</sup>
+                )
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Underweight (sever thinness)</td>
+              <td data-minrange="0" data-maxrange="15.9">&lt; 16.0</td>
+            </tr>
+            <tr>
+              <td>Underweight (moderate thinness)</td>
+              <td data-minrange="16.0" data-maxrange="16.9">16.0 - 16.9</td>
+            </tr>
+            <tr>
+              <td>Underweight (mild thinness)</td>
+              <td data-minrange="17.0" data-maxrange="18.4">17.0 - 18.4</td>
+            </tr>
+            <tr>
+              <td>Normal range</td>
+              <td data-minrange="18.5" data-maxrange="24.9">18.5 - 24.9</td>
+            </tr>
+            <tr>
+              <td>Overweight (pre-obese)</td>
+              <td data-minrange="25.0" data-maxrange="29.9">25.0 - 29.9</td>
+            </tr>
+            <tr>
+              <td>Obese (class I)</td>
+              <td data-minrange="30.0" data-maxrange="34.9">30.0 - 34.9</td>
+            </tr>
+            <tr>
+              <td>Obese (class II)</td>
+              <td data-minrange="35.0" data-maxrange="39.9">35.0 - 39.9</td>
+            </tr>
+            <tr>
+              <td>Obese (class III)</td>
+              <td data-minrange="40.0" data-maxrange="100">&#8805; 40.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
 </html>
